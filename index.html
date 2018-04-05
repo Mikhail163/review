@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Review Page</title>
+
+    <link rel="stylesheet" type="text/css" href="style/review.css">
+    <script src="js/review.js"></script>
+
+</head>
+
+<body>
+
+    <form method="post" class="review container" action="">
+
+        <div class="inner">
+            <label for="user_name">Имя</label>
+            <input type="text" name="nickname" id="user_name">
+        </div>
+
+        <div class="inner">
+            <label class="red">Оценка</label>
+            <div class="ratings_control" id="new_review" value="0">
+
+                <input type="radio" value="1" id="new_review_rate_1" name="rating">
+                <label for="new_review_rate_1"></label>
+
+                <input type="radio" value="2" id="new_review_rate_2" name="rating">
+                <label for="new_review_rate_2"></label>
+
+                <input type="radio" value="3" id="new_review_rate_3" name="rating">
+                <label for="new_review_rate_3"></label>
+
+                <input type="radio" value="4" id="new_review_rate_4" name="rating">
+                <label for="new_review_rate_4"></label>
+
+                <input type="radio" value="5" id="new_review_rate_5" name="rating">
+                <label for="new_review_rate_5"></label>
+
+            </div>
+        </div>
+
+        <div class="inner">
+            <label for="advantages">Достоинства</label>
+            <textarea name="advantages" id="advantages" rows="5"></textarea>
+        </div>
+
+        <div class="inner">
+            <label for="disadvantages">Недостатки</label>
+            <textarea name="disadvantages" id="disadvantages" rows="5"></textarea>
+        </div>
+
+        <div class="inner">
+            <label for="comment" class="red">Комментарий</label>
+            <textarea name="comment" id="comment" rows="5"></textarea>
+        </div>
+
+        <div class="inner">
+            <button id="addOpinion" class="pretty_button">Оставить отзыв</button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>

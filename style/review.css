@@ -1,0 +1,45 @@
+.container {
+  box-sizing: border-box;
+  width: 1200px;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.review {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5px;
+  background-color: #eeeeee;
+  border-radius: 5px; }
+
+.red {
+  color: red; }
+
+.inner {
+  width: 100%;
+  display: flex; }
+  .inner > label {
+    width: 160px;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+
+.ratings_control {
+  display: flex; }
+  .ratings_control input {
+    display: none; }
+  .ratings_control label {
+    content: ""; }
+    .ratings_control label::before {
+      font-size: 2rem;
+      content: '\2606';
+      cursor: pointer; }
+    .ratings_control label.red::before {
+      color: red; }
+    .ratings_control label:hover::before {
+      content: '\2605';
+      color: red; }
+
+/*# sourceMappingURL=review.css.map */
