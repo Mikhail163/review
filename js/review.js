@@ -1,7 +1,8 @@
 "use strict";
+let rating = {};
 
 window.onload = function () {
-    let rating = new Rating();
+    rating = new Rating();
 }
 
 function Rating(id = "new_review") {
@@ -43,7 +44,9 @@ Rating.prototype.mouseMove = function (mark) {
  * @param {integer} mark по какой оценке кликнули
  */
 Rating.prototype.mouseClick = function (mark) {
-    this.rating.setAttribute("value", mark);
+    this.rating.setAttribute("value", mark + 1);
+
+    console.log(this.rating.getAttribute("value"));
 }
 
 /**
@@ -59,12 +62,32 @@ Rating.prototype.mouseOver = function () {
 Rating.prototype.mouseOut = function () {
     this.mouseIn = false;
 
-    this.render(this.rating.getAttribute("value"));
+    let mark = this.rating.getAttribute("value")
+
+    if (mark === 0) {
+        this.zero();
+    } else {
+        this.render(this.rating.getAttribute("value") - 1);
+    }
+
 
 }
 
 Rating.prototype.render = function (mark) {
     for (let i = 0; i < this.label.length; i++) {
-        this.label[i].classList = (i > mark || mark === 0) ? "" : "red";
+
+
+        let classlist = (i > mark) ? "" : "red";
+
+        this.label[i].classList = classlist;
+
+
+
+    }
+}
+
+Rating.prototype.zero = function () {
+    for (let i = 0; i < this.label.length; i++) {
+        this.label[i].classList = "";
     }
 }
