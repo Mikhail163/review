@@ -37,6 +37,7 @@
       content: '\2606';
       cursor: pointer; }
     .ratings_control label.red::before {
+      content: '\2605';
       color: red; }
     .ratings_control label:hover::before {
       content: '\2605';

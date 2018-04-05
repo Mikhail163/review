@@ -54,8 +54,8 @@ $star_active_color: red;
 
         &.red::before {
 
+            content: '\2605';
             color: $star_active_color;
-
         }
 
         &:hover::before {

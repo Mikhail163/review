@@ -65,6 +65,6 @@ Rating.prototype.mouseOut = function () {
 
 Rating.prototype.render = function (mark) {
     for (let i = 0; i < this.label.length; i++) {
-        this.label[i].classList = mark < i ? "" : "red";
+        this.label[i].classList = (i > mark || mark === 0) ? "" : "red";
     }
 }
