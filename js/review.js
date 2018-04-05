@@ -8,7 +8,6 @@ function Rating(id = "new_review") {
     this.id = id;
     this.rating = document.getElementById(id);
     this.init();
-    this.label = [];
 
     this.mouseIn = false;
 }
@@ -22,13 +21,12 @@ Rating.prototype.init = function () {
 
     for (let i = 0; i < this.label.length; i++) {
         this.label[i].addEventListener("mouseover", () => this.mouseMove(i));
-        this.label[i].addEventListener("click", () => this.mouseClick(i + 1));
+        this.label[i].addEventListener("click", () => this.mouseClick(i));
     }
 
 
 
     // Навешиваем событие движение мыши над рейтингом
-    this.rating.addEventListener("mouseover", () => this.mouseOver());
     this.rating.addEventListener("mouseout", () => this.mouseOut());
 }
 
