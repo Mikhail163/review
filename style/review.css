@@ -27,17 +27,35 @@
     margin-bottom: 5px; }
 
 .ratings_control {
-  display: flex; }
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+  .ratings_control.need {
+    border: 1px solid red; }
   .ratings_control input {
     display: none; }
   .ratings_control label {
-    content: ""; }
+    content: "";
+    position: relative;
+    width: 28px;
+    height: 28px;
+    box-sizing: border-box; }
     .ratings_control label::before {
       font-size: 2rem;
       content: '\2606';
-      cursor: pointer; }
+      cursor: pointer;
+      position: absolute;
+      top: -10px;
+      box-sizing: border-box; }
     .ratings_control label.red::before {
       content: '\2605';
       color: red; }
+
+textarea {
+  box-sizing: border-box; }
+
+textarea.need {
+  border: 1px solid red; }
 
 /*# sourceMappingURL=review.css.map */

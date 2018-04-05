@@ -37,11 +37,24 @@ $star_active_color: red;
 
 .ratings_control {
     display: flex;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    &.need {
+        border: 1px solid red;
+    }
+
     & input {
         display: none;
     }
     & label {
         content: "";
+        position: relative;
+        width: 28px;
+        height: 28px;
+        box-sizing: border-box;
+
 
 
         &::before {
@@ -49,6 +62,9 @@ $star_active_color: red;
             font-size: 2rem;
             content: '\2606';
             cursor: pointer;
+            position: absolute;
+            top: -10px;
+            box-sizing: border-box;
 
         }
 
@@ -59,4 +75,12 @@ $star_active_color: red;
         }
 
     }
+}
+
+textarea {
+    box-sizing: border-box;
+}
+
+textarea.need {
+    border: 1px solid red;
 }
